@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "foodassistant.py", line 221, in <module>
+    main()
+  File "foodassistant.py", line 210, in main
+    ASK_FOR_VIDEO: [MessageHandler(filters.VIDEO, reels)],
+NameError: name 'ASK_FOR_VIDEO' is not defined
