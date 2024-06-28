@@ -1,0 +1,9 @@
+000 (57559.000.000) 2024-06-28 01:33:09 Job submitted from host: <10.1.112.113:9618?addrs=10.1.112.113-9618&alias=isye-hps0401.isye.gatech.edu&noUDP&sock=schedd_1922_e91d>
+...
+001 (57559.000.000) 2024-06-28 01:33:17 Job executing on host: <10.1.112.126:9618?addrs=10.1.112.126-9618&alias=isye-hpc0451.isye.gatech.edu&noUDP&sock=startd_2160474_0abd>
+	SlotName: slot1_2@isye-hpc0451.isye.gatech.edu
+...
+006 (57559.000.000) 2024-06-28 01:33:26 Image size of job updated: 52868
+	39  -  MemoryUsage of job (MB)
+	39584  -  ResidentSetSize of job (KB)
+...

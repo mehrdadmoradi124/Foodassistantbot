@@ -1,0 +1,31 @@
+000 (57557.000.000) 2024-06-28 01:15:37 Job submitted from host: <10.1.112.113:9618?addrs=10.1.112.113-9618&alias=isye-hps0401.isye.gatech.edu&noUDP&sock=schedd_1922_e91d>
+...
+001 (57557.000.000) 2024-06-28 01:15:37 Job executing on host: <10.1.112.126:9618?addrs=10.1.112.126-9618&alias=isye-hpc0451.isye.gatech.edu&noUDP&sock=startd_2160474_0abd>
+	SlotName: slot1_2@isye-hpc0451.isye.gatech.edu
+...
+006 (57557.000.000) 2024-06-28 01:15:45 Image size of job updated: 706476
+	39  -  MemoryUsage of job (MB)
+	39492  -  ResidentSetSize of job (KB)
+...
+006 (57557.000.000) 2024-06-28 01:20:45 Image size of job updated: 1066456
+	40  -  MemoryUsage of job (MB)
+	40376  -  ResidentSetSize of job (KB)
+...
+006 (57557.000.000) 2024-06-28 01:25:46 Image size of job updated: 1066456
+	40  -  MemoryUsage of job (MB)
+	40388  -  ResidentSetSize of job (KB)
+...
+004 (57557.000.000) 2024-06-28 01:30:40 Job was evicted.
+	(0) CPU times
+		Usr 0 00:00:01, Sys 0 00:00:01  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :     0.00        1         1 
+	   Disk (KB)            :     1           1     74228 
+	   Memory (MB)          :    40           1       128 
+...
+009 (57557.000.000) 2024-06-28 01:30:40 Job was aborted.
+	via condor_rm (by user mmoradi6)
+...

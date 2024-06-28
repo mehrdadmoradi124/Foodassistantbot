@@ -1,0 +1,31 @@
+2024-06-28 00:19:08,254 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7061065891:AAE7TlkHMWqVTgseYbcSYS_Wk4QWea02Wlo/getMe "HTTP/1.1 200 OK"
+2024-06-28 00:19:08,359 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7061065891:AAE7TlkHMWqVTgseYbcSYS_Wk4QWea02Wlo/deleteWebhook "HTTP/1.1 200 OK"
+2024-06-28 00:19:08,361 - telegram.ext.Application - INFO - Application started
+2024-06-28 00:19:18,694 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7061065891:AAE7TlkHMWqVTgseYbcSYS_Wk4QWea02Wlo/getUpdates "HTTP/1.1 200 OK"
+2024-06-28 00:19:22,710 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7061065891:AAE7TlkHMWqVTgseYbcSYS_Wk4QWea02Wlo/getUpdates "HTTP/1.1 200 OK"
+2024-06-28 00:19:23,085 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7061065891:AAE7TlkHMWqVTgseYbcSYS_Wk4QWea02Wlo/sendMessage "HTTP/1.1 200 OK"
+2024-06-28 00:19:24,416 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7061065891:AAE7TlkHMWqVTgseYbcSYS_Wk4QWea02Wlo/getUpdates "HTTP/1.1 200 OK"
+2024-06-28 00:19:24,418 - __main__ - INFO - User choice: Recipe
+2024-06-28 00:19:24,544 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7061065891:AAE7TlkHMWqVTgseYbcSYS_Wk4QWea02Wlo/sendMessage "HTTP/1.1 200 OK"
+2024-06-28 00:19:34,539 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7061065891:AAE7TlkHMWqVTgseYbcSYS_Wk4QWea02Wlo/getUpdates "HTTP/1.1 200 OK"
+2024-06-28 00:19:44,187 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7061065891:AAE7TlkHMWqVTgseYbcSYS_Wk4QWea02Wlo/getUpdates "HTTP/1.1 200 OK"
+2024-06-28 00:19:44,406 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/mmoradi6/foodassistant/bot_env/lib64/python3.8/site-packages/telegram/ext/_application.py", line 1325, in process_update
+    await coroutine
+  File "/home/mmoradi6/foodassistant/bot_env/lib64/python3.8/site-packages/telegram/ext/_handlers/conversationhandler.py", line 857, in handle_update
+    new_state: object = await handler.handle_update(
+  File "/home/mmoradi6/foodassistant/bot_env/lib64/python3.8/site-packages/telegram/ext/_handlers/basehandler.py", line 157, in handle_update
+    return await self.callback(update, context)
+  File "foodassistant.py", line 156, in recipe
+    append_dictionary_to_file(out, 'food.txt')
+  File "foodassistant.py", line 102, in append_dictionary_to_file
+    file.write(str(dictionary)+"\n")
+io.UnsupportedOperation: not writable
+2024-06-28 00:19:54,528 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7061065891:AAE7TlkHMWqVTgseYbcSYS_Wk4QWea02Wlo/getUpdates "HTTP/1.1 200 OK"
+2024-06-28 00:20:04,642 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7061065891:AAE7TlkHMWqVTgseYbcSYS_Wk4QWea02Wlo/getUpdates "HTTP/1.1 200 OK"
+2024-06-28 00:20:14,760 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7061065891:AAE7TlkHMWqVTgseYbcSYS_Wk4QWea02Wlo/getUpdates "HTTP/1.1 200 OK"
+2024-06-28 00:20:24,872 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7061065891:AAE7TlkHMWqVTgseYbcSYS_Wk4QWea02Wlo/getUpdates "HTTP/1.1 200 OK"
+2024-06-28 00:20:34,991 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7061065891:AAE7TlkHMWqVTgseYbcSYS_Wk4QWea02Wlo/getUpdates "HTTP/1.1 200 OK"
+2024-06-28 00:20:45,110 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7061065891:AAE7TlkHMWqVTgseYbcSYS_Wk4QWea02Wlo/getUpdates "HTTP/1.1 200 OK"
+2024-06-28 00:20:55,221 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7061065891:AAE7TlkHMWqVTgseYbcSYS_Wk4QWea02Wlo/getUpdates "HTTP/1.1 200 OK"

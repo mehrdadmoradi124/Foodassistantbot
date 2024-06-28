@@ -6,7 +6,8 @@ from telegram import (ReplyKeyboardMarkup, ReplyKeyboardRemove, Update, InlineKe
 from telegram.ext import (Application, CallbackQueryHandler, CommandHandler, ContextTypes, ConversationHandler, MessageHandler, filters)
 from moviepy.editor import VideoFileClip
 import os
-
+from collections import Counter
+import random
 
 def write_recipe(text):
     # Construct the curl command
@@ -22,18 +23,39 @@ def write_recipe(text):
     # Execute the curl command and capture output
     result = subprocess.run(curl_command, capture_output=True, text=True)
 
-    # Check if curl was successful
-    if result.returncode == 0:
-        # Parse the JSON response
-        try:
-            response = json.loads(result.stdout)
-            return response[0]['response']['response'] #output the actual food dictionary
-        except json.JSONDecodeError as e:
-            print(f"Error decoding JSON: {e}")
-    else:
-        print(f"curl command failed with error: {result.stderr}")
+    response = json.loads(result.stdout)
+    return response[0]['response']['response'] #output the actual food dictionary
+def choose_grocery(number_of_meals=3): #default is 3 food, each for two days including 4 servings
+    final_dict={}
+    final_list=[]
+    file_dict=open("food.txt","r").readlines()
+    file_recipe=open("recipe.txt","r").readlines()
+    length=len(file_dict)
+    count=0
+    while count<3:
+        numb=random.randint(0,length-1)
+        line_dict=file_dict[numb]
+        line_recipe=file_recipe[numb]
+        if line_dict['serving']:
+            ser=line['serving']
+            dic={k: v / ser for k, v in line_dict.iteritems()}
+            final_dict=dict(Counter(final_dict) + Counter(dic))
+            final_list.append(line_recipe)
+            count+=1
+    
+    final_dict={k: v * 4 for k, v in final_dict.iteritems()}
+    final_dict['recipe']=final_list
+    return final_dict
 
-    return None
+
+
+
+
+
+
+
+
+
 import subprocess
 import json
 from moviepy.editor import VideoFileClip
@@ -111,13 +133,10 @@ async def choose_option(update: Update, context: ContextTypes.DEFAULT_TYPE) -> i
         )
         return REELS
     elif user_choice == 'Weekly Groceries':
-        groceries = [
-            'Milk', 'Eggs', 'Bread', 'Chicken', 'Rice',
-            'Tomatoes', 'Potatoes', 'Onions', 'Garlic', 'Fruits'
-        ]
-        grocery_list = '\n'.join(groceries)
+
         await update.message.reply_text(
-            f'<b>Your weekly grocery list is:\n{grocery_list}</b>',
+
+            f'<b>Your weekly grocery list is:\n{choose_grocery()}</b>',
             parse_mode='HTML'
         )
 async def recipe(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
